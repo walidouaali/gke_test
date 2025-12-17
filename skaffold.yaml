@@ -12,3 +12,20 @@ manifests:
 
 deploy:
   kubectl: {}
+
+profiles:
+  # Profil pour l'environnement de développement (dev)
+  - name: dev
+    patches:
+      # Ajoute le namespace 'dev' par défaut pour les manifestes Kubernetes
+      - op: add
+        path: /deploy/kubectl/defaultNamespace
+        value: dev
+  
+  # Profil pour l'environnement de production (prod)
+  - name: prod
+    patches:
+      # Ajoute le namespace 'prod' par défaut pour les manifestes Kubernetes
+      - op: add
+        path: /deploy/kubectl/defaultNamespace
+        value: prod

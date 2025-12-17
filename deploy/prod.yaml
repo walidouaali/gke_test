@@ -5,4 +5,3 @@ metadata:
 description: prod environment
 gke:
   cluster: projects/gke-project-481520/locations/us-central1/clusters/autopilot-cluster-1
-  namespace: prod
