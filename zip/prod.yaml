@@ -1,0 +1,8 @@
+apiVersion: deploy.cloud.google.com/v1
+kind: Target
+metadata:
+  name: prod
+description: prod environment
+gke:
+  cluster: projects/gke-project-481520/locations/us-central1/clusters/autopilot-cluster-1
+  namespace: prod
