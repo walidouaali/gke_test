@@ -1,13 +1,14 @@
 apiVersion: skaffold/v4beta9
 kind: Config
+
 build:
-  tagPolicy:
-    gitCommit: {}
-  local: {}
+  artifacts:
+    - image: us-central1-docker.pkg.dev/gke-project-481520/gke-repo/quickstart-image
+    - image: us-central1-docker.pkg.dev/gke-project-481520/gke-repo/flask-image
+
 manifests:
   rawYaml:
-    - ./kubernetes/*
+    - kubernetes/*.yaml
+
 deploy:
   kubectl: {}
-  logs:
-    prefix: container

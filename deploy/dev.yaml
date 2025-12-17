@@ -2,9 +2,7 @@ apiVersion: deploy.cloud.google.com/v1
 kind: Target
 metadata:
   name: dev
-  annotations: {}
-  labels: {}
-description: dev
+description: dev environment
 gke:
-  cluster: projects/prj-poc-001/locations/us-central1-c/clusters/cluster-1
-
+  cluster: projects/gke-project-481520/locations/us-central1/clusters/autopilot-cluster-1
+  namespace: dev
