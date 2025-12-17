@@ -37,12 +37,6 @@ steps:
     - -xe
     - -c
     - |
-      # Test de l'existence des fichiers
-      ls -l deploy/pipeline.yaml
-      ls -l deploy/dev.yaml
-      ls -l deploy/prod.yaml
-      
-      # Si les fichiers sont trouvés, le script continue
       gcloud deploy apply --file deploy/pipeline.yaml --region=us-central1
       gcloud deploy apply --file deploy/dev.yaml --region=us-central1
       gcloud deploy apply --file deploy/prod.yaml --region=us-central1
