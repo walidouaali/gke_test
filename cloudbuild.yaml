@@ -32,7 +32,7 @@ steps:
 # ---------- CLOUD DEPLOY ----------
 - name: 'google/cloud-sdk:latest'
   id: 'Cloud Deploy Release'
-  entrypoint: 'sh'
+  entrypoint: 'bash'
   args:
     - -xe
     - -c
